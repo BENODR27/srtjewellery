@@ -85,7 +85,7 @@
                             cropper.destroy();
                         }
                         cropper = new Cropper(document.getElementById('image'), {
-                            aspectRatio: 10 / 7.5,
+                            // aspectRatio: 10 / 7.5,
                             viewMode: 1,
                         });
                     };

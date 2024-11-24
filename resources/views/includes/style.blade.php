@@ -1,30 +1,18 @@
 
 <?php
-<<<<<<< HEAD
 //$setting= \App\Models\Setting::first();
 //if (!$setting) {
 //            $setting = new Setting(); // Create a default setting if none exists
 //        }
-=======
-$setting= \App\Models\Setting::first();
-if (!$setting) {
-
-            $setting = new \App\Models\Setting(); // Create a default setting if none exists
-        }
->>>>>>> af88da2 (tmp)
 ?>
 <style>
 
 @import url("https://fonts.googleapis.com/css2?family=Italiana&family=Prompt:wght@300;400;500;600;700;800;900&display=swap");
 :root {
     --body-font: 'Prompt', sans-serif;
-    --heading-font: 'Italiana', serif;
-<<<<<<< HEAD
-        --primary-color: #000000;  
+    --heading-font: 'Italiana', serif;        --primary-color: #000000;  
   
-=======
-    --primary-color: #000000 ;  
->>>>>>> af88da2 (tmp)
+
     --secondary-color: #000000;
     --text-color: #74787C;
     --border-color: #3D3D3D;
@@ -1879,16 +1867,16 @@ h3 {
 }
 
 .ur-product-card .feature-image {
-    padding: 35px 35px;
+    /* padding: 35px 35px;
     overflow: hidden;
     height: 300px;
-    width: 100%;
+    width: 100%; */
 }
 .ur-product-card .feature-image img{
-    height: 100%;
-    width: 300px;
-    overflow: hidden;
-    object-fit: cover;
+    /* height: 100%;
+    width: 300px; */
+    /* overflow: hidden;
+    object-fit: cover; */
 }
 
 .ur-product-card .feature-image img {
