@@ -219,7 +219,7 @@
 
         ?>
         @if($image!=null)
-        <div class="position-relative pp-overlay-card overflow-hidden">
+        <div class="">
            
             <img src="{{ Storage::disk('s3')->url('product/images/' . $image->imageName) }}" alt="{{$image->imageName}}" class="img-fluid">
             <!-- <span class="category-title position-absolute">Bangles</span> -->
