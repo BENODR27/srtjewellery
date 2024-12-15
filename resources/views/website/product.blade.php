@@ -5,7 +5,7 @@
 <div class="container my-5">
     <div class="row">
         <div class="col-md-5">
-            <div class="main-img">
+            <div class="main-img ">
                 <img class="img-fluid" src="{{ Storage::disk('s3')->url('product/images/' . $product->imageName) }}" alt="{{$product->imageTitle}}">
              
             </div>
@@ -70,7 +70,7 @@
         }
 
         .main-description .product-title {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
         }
 
         .old-price-discount {

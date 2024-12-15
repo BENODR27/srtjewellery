@@ -1866,18 +1866,14 @@ h3 {
     color: var(--primary-color);
 }
 
-.ur-product-card .feature-image {
-    /* padding: 35px 35px;
-    overflow: hidden;
-    height: 300px;
-    width: 100%; */
+.ur-product-card {
+    background-color: #ddd8d8;
+    padding: 15px 15px;
+    overflow: none;
+     /* height: 300px; */
+    width: 100%; 
 }
-.ur-product-card .feature-image img{
-    /* height: 100%;
-    width: 300px; */
-    /* overflow: hidden;
-    object-fit: cover; */
-}
+
 
 .ur-product-card .feature-image img {
     -webkit-transition: var(--transition-base);
