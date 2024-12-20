@@ -9,10 +9,10 @@ Version: 1.1.0
 
 /************************************** base css **************************************/
 /* //#F1C677 */
-@import url("https://fonts.googleapis.com/css2?family=Italiana&family=Prompt:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 :root {
-    --body-font: 'Prompt', sans-serif;
-    --heading-font: 'Italiana', serif;
+    --body-font: 'Quicksand', sans-serif;
+    --heading-font: 'Quicksand', sans-serif;
     --primary-color: #000000;  
     --secondary-color: #000000;
     --text-color: #74787C;
@@ -27,11 +27,6 @@ Version: 1.1.0
     --gray-100: #F1F1F1;
     --gold:#ffffff;
     --primary-overlay: rgba(18, 17, 17, 0.9);
-    --primary-light-overlay: rgba(18, 17, 17, 0.6);
-    --shadow-light: 0px 30px 23px rgba(0, 0, 0, 0.07);
-    --box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.04);
-    --transition-base: all 0.3s;
-    --ur3-stroke: #292828;
 }
 
 

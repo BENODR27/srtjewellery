@@ -271,7 +271,7 @@
             <div class="row g-5 g-lg-4 align-items-center">
                 <div class="col-xl-5 col-lg-6">
                     <div class="image-wrapper">
-                        <img src="assets/images/about/1.jpg" alt="not found" class="img-fluid">
+                        <img src="{{asset('about.jpg')}}" alt="not found" class="img-fluid">
                     </div>
                 </div>
                 <div class="ps-xl-5 col-xl-5 col-lg-6">
