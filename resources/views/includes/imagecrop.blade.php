@@ -67,7 +67,7 @@
     <img id="image" style="max-height: 70%;">
 </div>
 <div>
-    <img id="croppedImage" style="max-height: 100%; margin-top: 20px; display: none;">
+    <img id="croppedImage" style="max-width:300px;max-height: 100%; margin-top: 20px; display: none;">
 </div>
 <button type="button" class="button" id="cropButton">Crop & Upload</button>
 <input type="hidden" id="croppedImageData" name="croppedImage">

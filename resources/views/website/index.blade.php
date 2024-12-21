@@ -288,7 +288,7 @@
                             We are authorised geographical indication & Handicrafts - Ministry of Textiles, Gov of India, jewellery maker.
                         </p>
                         <h5 class=" mb-5" style="color: black;">Registration No : AU/6999/GI/65/123</h5>
-                        <a href="#contactfooter" class="template-btn primary-btn text-uppercase"><span>Contact
+                        <a href="/#contactfooter" class="template-btn primary-btn text-uppercase"><span>Contact
                                 Us</span></a>
                     </div>
                 </div>
