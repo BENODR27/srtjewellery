@@ -43,36 +43,57 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
     max-width: 500px; /* Optional max width for larger screens */
+    height: 400px;
+    cursor: crosshair;
+    background-color: #f7f7f7; /* Optional background color */
 }
 
-.zoom-container .zoom-image {
+.zoom-image {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Ensures the entire image is visible without cropping */
+    object-fit: contain; /* Show full image initially */
     object-position: center;
-    transition: transform 0.3s ease-in-out, object-position 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out, object-position 0.2s ease-in-out;
 }
 
 /* Zoom effect on hover */
 .zoom-container:hover .zoom-image {
-    transform: scale(1.5); /* Scale the image for zoom effect */
-    object-position: 50% 50%; /* Focus on the center of the image */
+    transform: scale(1.5); /* Zoom in the image */
+    object-fit: cover; /* Show zoomed details */
 }
 
-/* Responsive adjustments for smaller devices */
+/* Responsive adjustments */
 @media (max-width: 767.98px) {
     .zoom-container {
-        aspect-ratio: unset; /* Removes the square aspect ratio for smaller screens */
-        max-width: 100%; /* Adjust to full width for smaller devices */
+        max-width: 100%;
         height: auto;
     }
 
-    .zoom-container .zoom-image {
-        object-fit: contain; /* Maintain full visibility on smaller screens */
+    .zoom-container:hover .zoom-image {
+        transform: none; /* Disable zoom on smaller devices */
     }
 }
 </style>
+
+<script>
+document.querySelectorAll('.zoom-container').forEach(container => {
+    const image = container.querySelector('.zoom-image');
+
+    container.addEventListener('mousemove', (e) => {
+        const rect = container.getBoundingClientRect();
+        // Calculate the x and y positions relative to the container
+        const x = (e.clientX - rect.left) / rect.width * 100;
+        const y = (e.clientY - rect.top) / rect.height * 100;
+
+        // Dynamically adjust object-position to focus the zoom effect on the cursor's position
+        image.style.objectPosition = `${x}% ${y}%`;
+    });
+
+    container.addEventListener('mouseleave', () => {
+        image.style.objectPosition = 'center'; // Reset to center when the cursor leaves
+    });
+});
+</script>
 
 @endsection
