@@ -85,7 +85,7 @@
                         cropper.destroy();
                     }
                     cropper = new Cropper(document.getElementById('image'), {
-                        aspectRatio: 9 / 13,
+                        aspectRatio: 13 / 9,
                         viewMode: 1,
                     });
                 };
@@ -99,8 +99,8 @@
                     
                     // Create a new canvas for resizing
                     const resizedCanvas = document.createElement('canvas');
-                    const maxWidth = 450; // Set the desired width
-                    const maxHeight = 650; // Set the desired height
+                    const maxWidth = 650; // Set the desired width
+                    const maxHeight = 450; // Set the desired height
                     
                     // Set the dimensions of the resized canvas
                     resizedCanvas.width = maxWidth;

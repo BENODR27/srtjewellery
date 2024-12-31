@@ -34,8 +34,15 @@
         </div>
 
 
-<style>
-    
-</style>
+        <style>
+            /* Style for consistent image size */
+            .img-fixed-size {
+                width: 100%; /* Adjust to the container width */
+                height: 300px; /* Fixed height for all images */
+                object-fit: cover; /* Ensures the image covers the area without distortion */
+                border-radius: 5px; /* Optional: Rounded corners */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow */
+            }
+        </style>
     <button type="button" class="scroll-top-btn"><i class="fa-solid fa-hand-pointer"></i></button>
 @endsection

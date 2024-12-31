@@ -4,22 +4,27 @@
 
 <div class="container my-5">
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-5 col-sm-12">
             <div class="main-img">
-                <img class="img-fluid" src="{{ Storage::disk('s3')->url('product/images/' . $product->imageName) }}" alt="{{$product->imageTitle}}">
+                <div class="zoom-container">
+                    <img class="img-fluid zoom-image" src="{{ Storage::disk('s3')->url('product/images/' . $product->imageName) }}" alt="{{$product->imageTitle}}">
+                </div>
             </div>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-7 col-sm-12">
             <div class="main-description mt-5">
-            
                 <div class="product-title text-black my-3">
                     {{$product->imageTitle}}
                 </div>
               
                 <div class="mt-4">
-                    <a class="btn btn-outline-success" href="https://api.whatsapp.com/send?phone=918122937639&text=Hi%20I%20want%20{{$product->imageTitle}}%20{{ Storage::disk('s3')->url('product/images/' . $product->imageName) }}"  target="_blank" style="color:green !important">
-                        Enquiry Via <i class="fab fa-whatsapp"></i>
-                    </a>
+                    <a class="btn btn-outline-success" 
+                    href="https://api.whatsapp.com/send?phone=918122937639&text=Hi%20I%20want%20this%20product:%20{{$product->imageTitle}}%0A%0A%20Image:%20{{ urlencode(Storage::disk('s3')->url('product/images/' . $product->imageName)) }}"  
+                    target="_blank" 
+                    style="color:green !important">
+                     Enquiry Via <i class="fab fa-whatsapp"></i>
+                 </a>
+                 
                 </div>
 
                 <div class="product-details mt-4">
@@ -33,119 +38,41 @@
 </div>
 
 <style>
-    .text-bold {
-        font-weight: 800;
+/* Main image container for zoom effect */
+.zoom-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
+    max-width: 500px; /* Optional max width for larger screens */
+}
+
+.zoom-container .zoom-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the entire image is visible without cropping */
+    object-position: center;
+    transition: transform 0.3s ease-in-out, object-position 0.3s ease-in-out;
+}
+
+/* Zoom effect on hover */
+.zoom-container:hover .zoom-image {
+    transform: scale(1.5); /* Scale the image for zoom effect */
+    object-position: 50% 50%; /* Focus on the center of the image */
+}
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 767.98px) {
+    .zoom-container {
+        aspect-ratio: unset; /* Removes the square aspect ratio for smaller screens */
+        max-width: 100%; /* Adjust to full width for smaller devices */
+        height: auto;
     }
 
-    /* Main image container adjustments */
-    .main-img img {
-        width: 100%;           /* Makes image responsive */
-        height: auto;          /* Maintain aspect ratio */
-        max-width: 500px;      /* Set max-width to limit width */
-        max-height: 400px;     /* Set max-height to limit height */
-        object-fit: contain;   /* Ensure the image fits within the container */
+    .zoom-container .zoom-image {
+        object-fit: contain; /* Maintain full visibility on smaller screens */
     }
-
-    /* Preview images */
-    .previews img {
-        width: 100%;
-        height: 140px;
-    }
-
-    .main-description .category {
-        text-transform: uppercase;
-        color: #0093c4;
-    }
-
-    .main-description .product-title {
-        font-size: 1.5rem;
-    }
-
-    .old-price-discount {
-        font-weight: 600;
-    }
-
-    .new-price {
-        font-size: 2rem;
-    }
-
-    .details-title {
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 1.2rem;
-        color: #757575;
-    }
-
-    .buttons .block {
-        margin-right: 5px;
-    }
-
-    .quantity input {
-        border-radius: 0;
-        height: 40px;
-    }
-
-    .custom-btn {
-        text-transform: capitalize;
-        background-color: #0093c4;
-        color: white;
-        width: 150px;
-        height: 40px;
-        border-radius: 0;
-    }
-
-    .custom-btn:hover {
-        background-color: #0093c4 !important;
-        font-size: 18px;
-        color: white !important;
-    }
-
-    .similar-product img {
-        height: 400px;
-    }
-
-    .similar-product {
-        text-align: left;
-    }
-
-    .similar-product .title {
-        margin: 17px 0px 4px 0px;
-    }
-
-    .similar-product .price {
-        font-weight: bold;
-    }
-
-    .questions .icon i {
-        font-size: 2rem;
-    }
-
-    .questions-icon {
-        font-size: 2rem;
-        color: #0093c4;
-    }
-
-    /* Responsive adjustments for all devices */
-    @media (max-width: 1199.98px) {
-        .main-img img {
-            max-width: 100%;   /* On smaller devices, the image takes full width of its container */
-            max-height: 400px; /* Limits the image height */
-        }
-    }
-
-    /* For small devices (phones and below 768px) */
-    @media (max-width: 767.98px) {
-        .main-img img {
-            max-width: 100%;   /* Image takes up full width on mobile screens */
-            max-height: 300px; /* You can reduce max-height for smaller screens */
-        }
-
-        .previews img {
-            width: 100%;
-            height: auto;
-        }
-    }
-
+}
 </style>
 
 @endsection

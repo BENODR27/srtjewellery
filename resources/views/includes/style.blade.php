@@ -7,10 +7,11 @@
 ?>
 <style>
 
-@import url("https://fonts.googleapis.com/css2?family=Italiana&family=Prompt:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Italiana&family=Prompt:wght@300;400;500;600;700;800;900&display=swap");
+
 :root {
-    --body-font: 'Prompt', sans-serif;
-    --heading-font: 'Italiana', serif;        --primary-color: #000000;  
+    --body-font: 'Prompt', 'Quicksand', sans-serif;
+    --heading-font: 'Quicksand',sans-serif;        --primary-color: #000000;  
   
 
     --secondary-color: #000000;
@@ -28,19 +29,103 @@
     --primary-overlay: rgba(18, 17, 17, 0.9);
     --primary-light-overlay: rgba(18, 17, 17, 0.6);
     --shadow-light: 0px 30px 23px rgba(0, 0, 0, 0.07);
-    --box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.04);
-    --transition-base: all 0.3s;
-    --ur3-stroke: #292828;
 }
 
-
-
+/* Apply the background color and text color */
 body {
-    margin: 0;
     font-family: var(--body-font);
-    background-color: var(--light-color);
-    color:var(--white-color) !important;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
+
+/* Header and Titles */
+h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);  /* Use gold for headings */
+}
+
+/* Links */
+a {
+    color: var(--primary-color);  /* Links in gold */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--diamond-blue);  /* On hover, turn to diamond blue */
+}
+
+/* Buttons */
+.btn {
+    font-family: var(--body-font);
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 12px 24px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--diamond-blue);  /* Hover effect with diamond blue */
+    box-shadow: var(--shadow-light);  /* Hover shadow effect */
+}
+
+/* Cards and Content Blocks */
+.card {
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-light);
+}
+
+/* Card Titles and Text */
+.card-title {
+    font-family: var(--heading-font);
+    color: var(--primary-color);  /* Use gold for card titles */
+}
+
+.card-text {
+    color: var(--subtle-text-color);  /* Muted text inside cards */
+}
+
+/* Image Overlays */
+.image-overlay {
+    background-color: rgba(0, 0, 0, 0.5);  /* Subtle dark overlay */
+    color: var(--white-color);
+    padding: 20px;
+}
+
+/* Input Fields */
+input[type="text"], input[type="email"], textarea {
+    font-family: var(--body-font);
+    background-color: var(--white-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: var(--primary-color);  /* Focus border in gold */
+}
+
+/* Footer */
+footer {
+    background-color: var(--light-gray);
+    color: var(--subtle-text-color);
+    padding: 20px;
+    text-align: center;
+}
+
 
 input {
     outline: 0;
