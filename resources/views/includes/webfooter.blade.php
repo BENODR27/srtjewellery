@@ -132,7 +132,7 @@
     </div>
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-      © 2024 Copyright:
+      © 2025 Copyright:
       <a class="text-reset fw-bold" href="https://benodr27.github.io/">360withben</a>
     </div>
     <!-- Copyright -->
