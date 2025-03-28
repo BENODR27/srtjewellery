@@ -40,11 +40,9 @@
 
                 <!-- Additional Information -->
                 <div class="additional-info mt-4">
-                    <h6 class="text-black">Material:</h6>
-                    <p>Silver and Gold</p>
+                    <h6 class="text-black">Materials & Stones:</h6>
+                    <p>Silver , Gold & Kemp Stones</p>
 
-                    <h6 class="text-black">Stone:</h6>
-                    <p>Kemp Stones</p>
 
                    
                     <p class="d-inline-flex gap-1">
@@ -63,14 +61,12 @@
                             </ul>
                         </div>
                       </div>
-                    {{-- <h6 class="text-black mt-2">Terms & Conditions:</h6>
+                    <h6 class="text-black mt-2">T&C Apply</h6>
                     <ul>
                         <li>All items are sold in good condition.</li>
-                        <li >No return, refund, or exchange is allowed. </li>
                         <li>In case of damages during transport, returns will be accepted for replacement or repair.</li>
-                        <li>No pickup service for returns. Customers must return items via reliable courier to our address.</li>
-                        <p id="policyButton"><b>( Click To View Policy )</b></p>
-                    </ul> --}}
+                        <p id="policyButton"><b>( View More )</b></p>
+                    </ul>
 
                 </div>
     

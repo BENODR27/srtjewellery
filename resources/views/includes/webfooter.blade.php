@@ -129,6 +129,7 @@
                               <li>Contact us via WhatsApp: +91-8122937639 to report the damage.</li>
                               <li>Provide your Invoice number, clear photos of the damaged item, and a detailed description of the damage.</li>
                               <li>We will review your request and, if approved, ship a replacement item within 5 business days.</li>
+                              <li>No pickup service for returns. Customers must return items via reliable courier to our address.</li>
                           </ol>
           
                           <p class="mt-3">Please note that we reserve the right to refuse any replacement requests that do not meet the above conditions.</p>
