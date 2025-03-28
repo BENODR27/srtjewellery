@@ -102,6 +102,42 @@
               srtemplejewells@gmail.com
             </p>
             <p><i class="fas fa-phone me-3"></i> +91 81229 37639</p>
+            <p class="fw-bold" id="policyButton">Terms & Conditions (click to view) </p>
+            <div class="modal fade" id="policyModal" tabindex="-1" aria-labelledby="policyModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="policyModalLabel">Policies</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <h6 class="text-black">No Return/Exchange Policy</h6>
+                          <p>All sales are final. We do not accept returns or exchanges.</p>
+          
+                          <h6 class="text-black mt-4">Replacement Policy for Damaged Items</h6>
+                          <p>We take great care in packaging and shipping our products. However, in the unlikely event that your item is damaged during transportation, we will replace it.</p>
+          
+                          <h6 class="text-black mt-4">Conditions for Replacement</h6>
+                          <ol>
+                              <li>The item must be damaged or defective upon arrival.</li>
+                              <li>You must notify us within 3 business days of receiving the damaged item.</li>
+                              <li>You must provide clear photos of the damaged item.</li>
+                          </ol>
+          
+                          <h6 class="text-black mt-4">Replacement Procedure</h6>
+                          <ol>
+                              <li>Contact us via WhatsApp: +91-8122937639 to report the damage.</li>
+                              <li>Provide your Invoice number, clear photos of the damaged item, and a detailed description of the damage.</li>
+                              <li>We will review your request and, if approved, ship a replacement item within 5 business days.</li>
+                          </ol>
+          
+                          <p class="mt-3">Please note that we reserve the right to refuse any replacement requests that do not meet the above conditions.</p>
+          
+                          <p class="mt-3">Thank you for your understanding.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
           </div>
           <!-- Grid column -->
         </div>
@@ -137,6 +173,15 @@
     </div>
     <!-- Copyright -->
   </footer>
+  <script>
+
+    
+    // Open modal on Policy button click
+    document.getElementById('policyButton').addEventListener('click', () => {
+        const modal = new bootstrap.Modal(document.getElementById('policyModal'));
+        modal.show();
+    });
+    </script>
   <!-- Footer -->
     
     

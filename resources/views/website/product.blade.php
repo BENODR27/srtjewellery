@@ -15,7 +15,7 @@
 
         <!-- Product Description Section -->
         <div class="col-md-7 col-sm-12">
-            <div class="main-description mt-5">
+            <div class="main-description">
                 <div class="product-title text-black my-3">
                     {{ $product->imageTitle }}
                 </div>
@@ -46,21 +46,31 @@
                     <h6 class="text-black">Stone:</h6>
                     <p>Kemp Stones</p>
 
-                    <h6 class="text-black">Care Instructions:</h6>
-                    <ul>
-                        <li>Apply cosmetics, hair products, lotions, perfumes & powders prior to donning your jewelry.</li>
-                        <li>Prevent your items from being exposed to moisture.</li>
-                        <li>Clean the backside of jewelry with 100% cotton cloth to wipe off excess dirt.</li>
-                        <li>Avoid velvet box to store jewelry; use plastic cover or box in a dry, dark, and cool place.</li>
-                    </ul>
-                    <h6 class="text-black mt-2">Terms & Conditions:</h6>
+                   
+                    <p class="d-inline-flex gap-1">
+                        <a class="text-black" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            Care Instructions <i class="bi bi-chevron-down"></i>
+                        </a>
+                       
+                      </p>
+                      <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                            <ul>
+                                <li>Apply cosmetics, hair products, lotions, perfumes & powders prior to donning your jewelry.</li>
+                                <li>Prevent your items from being exposed to moisture.</li>
+                                <li>Clean the backside of jewelry with 100% cotton cloth to wipe off excess dirt.</li>
+                                <li>Avoid velvet box to store jewelry; use plastic cover or box in a dry, dark, and cool place.</li>
+                            </ul>
+                        </div>
+                      </div>
+                    {{-- <h6 class="text-black mt-2">Terms & Conditions:</h6>
                     <ul>
                         <li>All items are sold in good condition.</li>
                         <li >No return, refund, or exchange is allowed. </li>
                         <li>In case of damages during transport, returns will be accepted for replacement or repair.</li>
                         <li>No pickup service for returns. Customers must return items via reliable courier to our address.</li>
                         <p id="policyButton"><b>( Click To View Policy )</b></p>
-                    </ul>
+                    </ul> --}}
 
                 </div>
     
@@ -70,41 +80,7 @@
 </div>
 
 <!-- Modal for Policy -->
-<div class="modal fade" id="policyModal" tabindex="-1" aria-labelledby="policyModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="policyModalLabel">Policies</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h6 class="text-black">No Return/Exchange Policy</h6>
-                <p>All sales are final. We do not accept returns or exchanges.</p>
 
-                <h6 class="text-black mt-4">Replacement Policy for Damaged Items</h6>
-                <p>We take great care in packaging and shipping our products. However, in the unlikely event that your item is damaged during transportation, we will replace it.</p>
-
-                <h6 class="text-black mt-4">Conditions for Replacement</h6>
-                <ol>
-                    <li>The item must be damaged or defective upon arrival.</li>
-                    <li>You must notify us within 3 business days of receiving the damaged item.</li>
-                    <li>You must provide clear photos of the damaged item.</li>
-                </ol>
-
-                <h6 class="text-black mt-4">Replacement Procedure</h6>
-                <ol>
-                    <li>Contact us via WhatsApp: +91-8122937639 to report the damage.</li>
-                    <li>Provide your Invoice number, clear photos of the damaged item, and a detailed description of the damage.</li>
-                    <li>We will review your request and, if approved, ship a replacement item within 5 business days.</li>
-                </ol>
-
-                <p class="mt-3">Please note that we reserve the right to refuse any replacement requests that do not meet the above conditions.</p>
-
-                <p class="mt-3">Thank you for your understanding.</p>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Styles for Zoom Effect -->
 <style>
@@ -161,11 +137,7 @@ document.querySelectorAll('.zoom-container').forEach(container => {
     });
 });
 
-// Open modal on Policy button click
-document.getElementById('policyButton').addEventListener('click', () => {
-    const modal = new bootstrap.Modal(document.getElementById('policyModal'));
-    modal.show();
-});
+
 </script>
 
 @endsection
